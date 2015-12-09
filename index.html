@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+        function initialize() {
+            var earth = new WE.map('earth_div');
+            earth.setView([46.8011, 8.2266], 2);
+            WE.tileLayer('http://data.webglearth.com/natural-earth-color/{z}/{x}/{y}.jpg', {
+                tileSize: 256,
+                bounds: [[-85, -180], [85, 180]],
+                minZoom: 0,
+                maxZoom: 16,
+                attribution: 'Made by: Pepijn van Duijn',
+                tms: true
+            }).addTo(earth);
+        }
+
+    </script>
+    <title>Bali Travel & Stay</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<body onload="initialize()">
+<div id="earth_div"></div>
+
+
+<ul id="menu_wrap" class="Gray">
+    <li class="button">
+        <a href="#">Start</a>
+    </li>
+    <li class="button">
+        <a href="#">Informatie</a>
+    </li>
+    <li class="button">
+        <a href="#">Reviews</a></li>
+    <li class="button">
+        <a href="#">Contact</a>
+    </li>
+</ul>
+
+</body>
+</html>
+
+
